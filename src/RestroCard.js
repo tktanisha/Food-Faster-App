@@ -1,19 +1,33 @@
 import React from 'react';
-
+// import {CDN_URL} from "./utils/constants"
 // way of writting inline css
 const inlineStyle={
     backgroundColor:"",
     position:"relative"
 }
 const RestroCard = (props) => {
+    const {resData}=props;
+
+    const{
+        
+        img,
+        name,
+        avgRating,
+        discount,   
+        deliveryTime,
+        cuisines,
+        locality,
+        
+    }=resData?.info;
+    
     return (
         <div>
             <div className="restro-card" style={inlineStyle}>
                  <div className="img-container">
-                 <img className="restro-logo" src={props.img} alt="Dmb(Doodh Misthan Bhandar)" />
+                 <img className="restro-logo" src={img} alt="restro Name" />
                   </div>
-                <div className="discount"> {props.discount}</div>
-                <div className="restro-name">{props.resName}</div>
+                <div className="discount"> {discount}</div>
+                <div className="restro-name">{name}</div>
                 <div className="rating"></div>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)">
                     <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
@@ -25,11 +39,11 @@ const RestroCard = (props) => {
                         </linearGradient>
                     </defs>
                 </svg>
-                <span className="rating-value">{props.rating}</span>
-                <span className="delivery-time">{props.duration}</span>
+                <span className="rating-value">{avgRating}</span>
+                <span className="delivery-time">{ " . "+ deliveryTime}</span>
                
-                <div className="cuisine">{props.cuisine}</div>
-            <div className="location">{props.location}</div>
+                <div className="cuisine">{cuisines}</div>
+            <div className="location">{locality}</div>
             </div>
             
         </div>

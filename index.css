@@ -53,8 +53,10 @@ body {
 
 .body{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:center;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
     background-color:white;
@@ -109,7 +111,7 @@ body {
     height: 100px;
     width: 90%;
     position: absolute;
-    bottom: 125px;
+    bottom: 116px;
     border-radius: 0 0 10px 10px;
     align-items:end;
     display:flex;
@@ -135,6 +137,7 @@ body {
  
     .location{
         opacity: 0.5;
+        margin-top: 0.5rem;
     }
   
 
@@ -148,4 +151,28 @@ body {
     gap: 1rem;
     padding: 1rem;
     
+}
+
+.filter-btn{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+    
+}
+.filter-btn:hover{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: rgb(219, 180, 3);
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+
+
 }
